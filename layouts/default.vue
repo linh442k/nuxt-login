@@ -2,9 +2,7 @@
   <v-app>
     <v-main>
       <v-container fluid id="default-container">
-        <v-layout align-center justify-center>
-          <Nuxt style="background-color: white"/>
-        </v-layout>
+          <Nuxt style="background-color: white" class="rounded"/>
       </v-container>
     </v-main>
   </v-app>
@@ -17,9 +15,6 @@
 #default-container{
   height: 100%;
 }
-.layout{
-  height: 100%;
-  max-width: 100%;
-}
+
 </style>
 
