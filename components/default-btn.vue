@@ -5,7 +5,8 @@
     :color="color"
     :depressed="depressed"
     :text="text"
-    :type="type">
+    :type="type"
+    @click="$emit(clickEventHandler)">
     {{ content }}
   </v-btn>
 </template>
@@ -45,8 +46,12 @@ export default {
     type: {
       type: String,
       default: "",
-    }
+    },
     // clickEvent
+    clickEventHandler: {
+      type: String,
+      default: "",
+    }
   }
 }
 </script>
