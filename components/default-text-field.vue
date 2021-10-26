@@ -7,14 +7,15 @@
       :value="value"
       @input="$emit('input', text)"
       v-model="text"
-
       :error-messages="errors"
       :type="type"
       :label="label"
       :color="color"
       :append-icon="append"
       :class="vuetifyClass"
+      :loading="loading"
     >
+<!--      :persistent-placeholder="true"-->
     </v-text-field>
   </validation-provider>
 </template>
@@ -52,6 +53,10 @@ export default {
     vuetifyClass: {
       type: String,
       default: "",
+    },
+    loading: {
+      type: [String, Boolean],
+      default: false,
     }
   },
   data: () => {

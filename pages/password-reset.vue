@@ -3,12 +3,6 @@
     <h1>
       This is password reset page
     </h1>
-    <default-btn
-      :vuetify-class="'text-uppercase'"
-      :route-name="'index'"
-      :color="'primary'"
-      :depressed="true"
-      :content="'về trang chủ'"/>
   </div>
 
 
@@ -16,8 +10,8 @@
 
 <script>
 export default {
-  name: "password-reset"
-
+  name: "password-reset",
+  middleware: "auth"
 }
 </script>
 

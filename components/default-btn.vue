@@ -6,6 +6,8 @@
     :depressed="depressed"
     :text="text"
     :type="type"
+    :elevation="elevation"
+    :loading="loading"
     @click="$emit(clickEventHandler)">
     {{ content }}
   </v-btn>
@@ -51,6 +53,14 @@ export default {
     clickEventHandler: {
       type: String,
       default: "",
+    },
+    elevation: {
+      type: [Number, String],
+      default: 0,
+    },
+    loading: {
+      type:  Boolean,
+      default: false,
     }
   }
 }

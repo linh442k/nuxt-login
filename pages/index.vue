@@ -83,6 +83,6 @@
 
 <script>
 export default {
-  middleware: "first-visit",
+  middleware: "auth",
 }
 </script>
