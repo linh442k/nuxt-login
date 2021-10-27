@@ -110,20 +110,27 @@ export default {
   }),
   methods: {
     async login() {
-      this.loading=true
+      this.loading = true
       const isValid = await this.$refs.observer.validate();
       if (!isValid) {
-        this.loading=false
+        this.loading = false
         // ABORT!!
       } else {
-        this.loading=false
-        if (this.username !== "Linh") {
-          this.incorrect_info = true;
-          return;
-        }
-        this.$store.commit('fauth/setUser', this.username)
-        this.$store.commit('fauth/setPass', this.password)
-        await this.$router.push({name: "dashboard"})
+        await this.$auth.loginWith("local", {
+          data: {
+            username: this.username,
+            password: this.password
+          }
+        })
+        this.loading = false
+        // if (this.username !== "Linh") {
+        //   this.incorrect_info = true;
+        //   return;
+        // }
+        // this.$store.commit('fauth/setUser', this.username)
+        // this.$store.commit('fauth/setPass', this.password)
+        // await this.$router.push({name: "dashboard"})
+
       }
     }
   }

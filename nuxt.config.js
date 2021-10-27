@@ -99,5 +99,36 @@ export default {
         vue.transformAssetUrls.video = ['src', 'poster']
       }
     }
+  },
+  router: {
+    // middleware: ['auth']
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: 'https://apiads.mhsolution.vn'
+    }
+  },
+  auth: {
+    strategies: {
+      local:{
+        token:{
+          property: "access_token",
+          global: true,
+        },
+        user: {
+          property: "user"
+        },
+        endpoints: {
+          login: {url: "/api/auth/login", method: "post"},
+          logout: {url: "/api/auth/logout", method: "post"},
+          user: {url: "/api/auth/me", method: "post"}
+        },
+        redirect: {
+          login: '/login',
+          logout: '/',
+          home: '/dashboard'
+        }
+      }
+    }
   }
 }

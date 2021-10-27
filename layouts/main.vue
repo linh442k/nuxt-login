@@ -84,6 +84,7 @@
 
 <script>
 export default {
+  middleware: ["fauth", "auth"],
   data() {
     return {
       drawer: true

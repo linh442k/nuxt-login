@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  middleware: "fauth",
   layout: 'empty',
   props: {
     error: {
