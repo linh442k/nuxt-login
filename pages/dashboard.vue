@@ -8,7 +8,7 @@
 <script>
 export default {
   layout: "main",
-  middleware: "auth",
+  middleware: "fauth",
   // methods: {
   //   logout() {
   //     this.$store.commit('auth/setUser', null)

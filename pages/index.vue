@@ -83,6 +83,6 @@
 
 <script>
 export default {
-  middleware: "auth",
+  middleware: "fauth",
 }
 </script>

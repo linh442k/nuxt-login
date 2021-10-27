@@ -91,8 +91,8 @@ export default {
   },
   methods: {
     logout() {
-      this.$store.commit('auth/setUser', null)
-      this.$store.commit('auth/setPass', null)
+      this.$store.commit('fauth/setUser', null)
+      this.$store.commit('fauth/setPass', null)
       this.$router.push({name: 'index'})
     }
   }

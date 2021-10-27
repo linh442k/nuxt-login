@@ -101,7 +101,7 @@
 
 <script>
 export default {
-  middleware: ["auth"],
+  middleware: ["fauth"],
   data: () => ({
     username: "",
     password: "",
@@ -121,8 +121,8 @@ export default {
           this.incorrect_info = true;
           return;
         }
-        this.$store.commit('auth/setUser', this.username)
-        this.$store.commit('auth/setPass', this.password)
+        this.$store.commit('fauth/setUser', this.username)
+        this.$store.commit('fauth/setPass', this.password)
         await this.$router.push({name: "dashboard"})
       }
     }
